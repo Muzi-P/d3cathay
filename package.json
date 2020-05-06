@@ -1,14 +1,14 @@
 {
-  "name": "forkify",
+  "name": "d3neo4j",
   "version": "1.0.0",
-  "description": "forkify project",
+  "description": "A proposal for Cathay United bank graph data visualization project",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open"
   },
-  "author": "Jonas Schmedtmann",
+  "author": "Muzi Gondwe",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
