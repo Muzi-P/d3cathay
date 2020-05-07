@@ -1,5 +1,40 @@
 import Scenario_2 from "./visualizations/scenario_2";
-import * as data from "./Data/data";
+import data from "./Data/data";
+import Scenario_1 from "./visualizations/scenario_1";
+
+/*
+ **Scenario_1 controller
+ */
+const ctrlScenario_1 = () => {
+  let scenario_1 = new Scenario_1();
+  scenario_1.populateMainCompany(
+    data.scenario_1.mainCompanyData(),
+    "maincompany-container"
+  );
+  let distributorOffSet = scenario_1.calcDistributorOffSet(
+    data.scenario_1.distributorData()
+  );
+
+  scenario_1.populateDistributorCompany(
+    "distributor",
+    data.scenario_1.distributorData(),
+    "distributor-container",
+    distributorOffSet
+  );
+
+
+  let purchaserOffSet = scenario_1.calcPurchaserOffSet(
+    data.scenario_1.purchaserData()
+  );
+  
+  scenario_1.populatePurchaserCompany(
+    "purchaser",
+    data.scenario_1.purchaserData(),
+    "purchaser-container",
+    purchaserOffSet
+  );
+};
+
 
 /*
  **Scenario_2 controller
@@ -7,27 +42,29 @@ import * as data from "./Data/data";
 
 const ctrlScenario_2 = () => {
   let scenario_2 = new Scenario_2();
-  let offSet = scenario_2.calcOffset(data.distributorData, data.purchaserData);
-  console.log(offSet);
+  let offSet = scenario_2.calcOffset(
+    data.scenario_2.distributorData(),
+    data.scenario_2.purchaserData()
+  );
   scenario_2.populateCompany(
     "purchaser",
-    data.purchaserData,
+    data.scenario_2.purchaserData(),
     "purchaser-container",
     offSet
   );
 
   scenario_2.populateCompany(
     "distributor",
-    data.distributorData,
+    data.scenario_2.distributorData(),
     "distributor-container",
     offSet
   );
 
-  scenario_2.populateMainCompany(data.mainCompanyData, "maincompany-container");
+  scenario_2.populateMainCompany(
+    data.scenario_2.mainCompanyData(),
+    "maincompany-container"
+  );
 };
 
-
-
-
-
-ctrlScenario_2()
+ctrlScenario_1();
+// ctrlScenario_2()
