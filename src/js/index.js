@@ -42,22 +42,26 @@ const ctrlScenario_1 = () => {
 
 const ctrlScenario_2 = () => {
   let scenario_2 = new Scenario_2();
-  let offSet = scenario_2.calcOffset(
-    data.scenario_2.distributorData(),
+  let purchaserOffSet = scenario_2.calcPurchaserOffSet(
     data.scenario_2.purchaserData()
   );
-  scenario_2.populateCompany(
+
+  scenario_2.populatePurchaserCompany(
     "purchaser",
     data.scenario_2.purchaserData(),
     "purchaser-container",
-    offSet
+    purchaserOffSet
   );
 
-  scenario_2.populateCompany(
+  let distributorOffSet = scenario_2.calcDistributorOffSet(
+    data.scenario_2.distributorData()
+  );
+
+  scenario_2.populateDistributorCompany(
     "distributor",
     data.scenario_2.distributorData(),
     "distributor-container",
-    offSet
+    distributorOffSet
   );
 
   scenario_2.populateMainCompany(
@@ -66,5 +70,5 @@ const ctrlScenario_2 = () => {
   );
 };
 
-ctrlScenario_1();
-// ctrlScenario_2()
+// ctrlScenario_1();
+ctrlScenario_2()

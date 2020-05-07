@@ -154,6 +154,15 @@ const scenario_2 = {
         percentange: "45%",
         personInCharge: "陳XX",
       },
+      {
+        type: "關係企業",
+        name: "國民關係股份有限公司",
+        alertCode: 1,
+        inLineCustomer: false,
+        risk: false,
+        percentange: "5%",
+        personInCharge: "陳XX",
+      },
     ];
   },
 

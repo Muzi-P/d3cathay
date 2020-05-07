@@ -32,7 +32,7 @@ export default class Scenario_1 {
 
   calcPurchaserOffSet(purchaserData) {
     let numOfPurchasers = Object.keys(purchaserData).length;
-    this.distributorOffSet["scenario"] = numOfPurchasers;
+    this.purchaserOffSet["scenario"] = numOfPurchasers;
     return this.purchaserOffSet;
   }
 
